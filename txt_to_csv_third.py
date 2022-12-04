@@ -174,13 +174,16 @@ def write_as_csv(path_to_dataset: str, paths_to_files: str):
                               paths_to_files[i], os.path.basename(paths_to_files[i])])
 
 
+def path_n_d():
+    return os.path.abspath("./dataset_copy")
+
 if __name__ == '__main__':
 
     path_to_dataset = os.path.abspath("../application_programming_first_lab_and_dataset/dataset")
 
     create_copy(path_to_dataset)
 
-    path_new_dataset = os.path.abspath("./dataset_copy")
+    path_new_dataset = path_n_d()
     paths_to_files = get_paths_to_files(path_new_dataset)
 
     write_as_csv(path_new_dataset, paths_to_files)

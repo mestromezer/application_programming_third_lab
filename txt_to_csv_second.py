@@ -10,7 +10,7 @@ def write_as_csv(path_to_dataset: str, paths_to_files: str):
         path_to_dataset (_type_): path to source
         paths_to_files (_type_): content from source
     """
-    with open("dataset_csv_first.csv", "w+", encoding='utf-8', newline='') as file:
+    with open("dataset_csv_copy.csv", "w+", encoding='utf-8', newline='') as file:
         csv_file = csv.writer(file, delimiter=';')
         csv_file.writerow(["Absolute path", "Relative path", "Class"])
 
@@ -82,6 +82,7 @@ def get_paths_to_files(path_to_dataset: str) -> str:
 if __name__ == '__main__':
 
     path_to_dataset = os.path.abspath("../application_programming_first_lab_and_dataset/dataset")
+    
     paths_to_files = get_paths_to_files(path_to_dataset)
 
     new_dataset_path = copy_dataset(path_to_dataset)
