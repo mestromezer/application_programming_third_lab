@@ -26,6 +26,7 @@ def get_paths_to_files(path_to_dataset: str) -> str:
     Returns:
         str: list of paths to files
     """
+    
     paths_to_files = list()
 
     for folder_num in range(1, 6):

@@ -164,7 +164,7 @@ def write_as_csv(path_to_dataset: str, paths_to_files: str):
         path_to_dataset (str): Path to surce
         paths_to_files (str): Paths to files
     """
-    with open("dataset_csv_third.csv", "w+", encoding='utf-8', newline='') as file:
+    with open("dataset_csv_random.csv", "w+", encoding='utf-8', newline='') as file:
         csv_file = csv.writer(file, delimiter=';')
         csv_file.writerow(["Absolute path", "Relative path", "Class"])
 
